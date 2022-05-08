@@ -901,7 +901,15 @@ class PlayState extends MusicBeatState
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
 		grpNoteSplashes.add(splash);
 		splash.alpha = 0.0;
+var creditText:FlxText = new FlxText(876, 648, 348);
 
+		creditText.text = 'PORTED BY\nEDD34R';		creditText.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+
+		creditText.cameras = [camHUD];
+
+		creditText.scrollFactor.set();
+
+		add(creditText);
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
 
